@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="gear_container">
+        <div class="circle" id="colorr1">
+            <div class="gear">
+                <div class="bar" id="colorr2"></div>
+                <div class="bar" id="colorr3"></div>
+                <div class="bar" id="colorr4"></div>
+                <div class="bar" id="colorr5"></div>
+            </div>
+        </div>
+        <div class="circle" id="colorr10">
+            <div class="gear">
+                <div class="bar" id="colorr6"></div>
+                <div class="bar" id="colorr7"></div>
+                <div class="bar" id="colorr8"></div>
+                <div class="bar" id="colorr9"></div>
+            </div>
+        </div>
+        <button id="button-el" onclick="color()">Click to change color</button>
+    </div>
+</body>
+<script>
+    let colorPalette = ["#fff", "#00f", "#0f0", "#f00", "#ff0", "#0ff", "#f0f"] 
+    
+
+    function color() {
+        let randomColor = colorPalette[Math.floor(Math.random() * 7)]
+        console.log(randomColor)
+        document.querySelector("#colorr1").style.backgroundColor = randomColor
+        document.querySelector("#colorr2").style.backgroundColor = randomColor
+        document.querySelector("#colorr3").style.backgroundColor = randomColor
+        document.querySelector("#colorr4").style.backgroundColor = randomColor
+        document.querySelector("#colorr5").style.backgroundColor = randomColor
+        document.querySelector("#colorr6").style.backgroundColor = randomColor
+        document.querySelector("#colorr7").style.backgroundColor = randomColor
+        document.querySelector("#colorr8").style.backgroundColor = randomColor
+        document.querySelector("#colorr9").style.backgroundColor = randomColor
+        document.querySelector("#colorr10").style.backgroundColor = randomColor
+
+    }
+</script>
+</html>

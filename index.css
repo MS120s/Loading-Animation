@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.gear_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+.circle{
+    width: 200px;
+    background-color: #fff;
+    height: 200px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.circle:nth-child(1){
+    animation: anim 5s linear infinite forwards;
+}
+
+.circle:nth-child(2){
+    animation: anime 5s linear .3s infinite forwards;
+}
+
+.gear{
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bar{
+    width: 240px;
+    height: 35px;
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    left: -50%;
+    z-index: -1;
+}
+
+.bar:nth-child(1){
+    transform: rotate(45deg);
+}
+
+.bar:nth-child(2){
+    transform: rotate(90deg);
+}
+
+.bar:nth-child(3){
+    transform: rotate(135deg);
+}
+
+button{
+    position: absolute;
+    bottom: 120px;
+    padding: 15px 10px;
+    color: white;
+    border: 2px solid white;  
+    background-color: transparent;  
+    font-family: monospace;
+}
+
+button:hover{
+    box-shadow: 0px 0px 20px white;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+button:active{
+    transform: scale(1.0);
+}
+
+@keyframes anim{
+    0%{
+       transform: rotate(360deg);
+    }
+}
+
+@keyframes anime {
+    0%{
+        transform: rotate(-360deg);
+     }
+}
+
+@media (max-width: 425px){
+    .gear_container{
+        padding-top: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    button{
+        bottom: 70px
+    }
+}
